@@ -2,10 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AI Quality Inspector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Quality Inspector | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>AI Quality Inspector</h1>
-    <p>Status: Project Initialized. Day 1 complete.</p>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h2>AI Sentinel</h2>
+            <nav>
+                <ul>
+                    <li class="active">Dashboard</li>
+                    <li>History</li>
+                    <li>Settings</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Content Audit Dashboard</h1>
+                <p>Paste AI-generated text below to analyze quality.</p>
+            </header>
+
+            <section class="editor-section">
+                <textarea id="ai-input" placeholder="Paste AI text here..."></textarea>
+                <div class="controls">
+                    <button id="analyze-btn">Analyze Quality</button>
+                    <span id="word-count">Words: 0</span>
+                </div>
+            </section>
+
+            <section class="results-grid">
+                <div class="card">
+                    <h3>Readability Score</h3>
+                    <div id="readability-result">--</div>
+                </div>
+                <div class="card">
+                    <h3>AI Sentiment</h3>
+                    <div id="sentiment-result">--</div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
